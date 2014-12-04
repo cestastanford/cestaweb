@@ -1,0 +1,95 @@
+---
+layout: stanford-default
+---
+
+<div id="overview">
+    <div class="span12" id="feature-banner">
+        <div id="feature-banner-text">
+            <h3>{{ site.title }}</h3>
+            <p>{{ site.description }}</p>
+        </div>
+    </div>
+    <img src="{{ site.url }}/assets/images/header2.png" width="920" height="320" />
+</div>
+
+<div class="span8">
+{{ content }}
+
+<div class="news-items">
+<h3>News and Updates</h3>
+
+<ul class="posts">
+    {% for post in site.posts limit: 6 %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
+
+</div>
+
+</div>
+
+<div class="span4">
+<div id="event-list">
+    <h3>Upcoming Events</h3>
+      <div class='event postcard-left'>
+      <div class='event-date'>
+        <div class='event-month'>JUN</div>
+        <div class='event-day'>2</div>
+        <div class='event-year'>2014</div>
+      </div>
+        <div class='event-text'>The Lab will present the Lila2 Interface, a visualization tool that enables users to perform ad-hoc analyses.
+        <p class='timestamp'>10:00-12:00, Terrace Room, Margaret Jacks Hall</p>
+        </div>
+      </div>
+      <div class='event postcard-left'>
+      <div class='event-date'>
+        <div class='event-month'>MAY</div>
+        <div class='event-day'>28</div>
+        <div class='event-year'>2014</div>
+      </div>
+        <div class='event-text'>The Emotions of London, another geographical project, will update the group on their recent work.
+        <p class='timestamp'>10:00-12:00, Literary Lab</p>
+        </div>
+      </div>
+      <div class='event postcard-left'>
+      <div class='event-date'>
+        <div class='event-month'>MAY</div>
+        <div class='event-day'>19</div>
+        <div class='event-year'>2014</div>
+      </div>
+        <div class='event-text'>Matt Wilkens, Assistant Professor of English at Notre Dame University, will discuss the geography of American literature.
+        <p class='timestamp'>10:00-12:00, Literary Lab</p>
+        </div>
+      </div>
+      <div class='event postcard-left'>
+      <div class='event-date'>
+        <div class='event-month'>MAY</div>
+        <div class='event-day'>15</div>
+        <div class='event-year'>2014</div>
+      </div>
+        <div class='event-text'>Networks in History
+        <p class='timestamp'>9:00-5:00, Humanities+Design</p>
+        </div>
+      </div>
+      <div class='event postcard-left'>
+      <div class='event-date'>
+        <div class='event-month'>MAY</div>
+        <div class='event-day'>12</div>
+        <div class='event-year'>2014</div>
+      </div>
+        <div class='event-text'>The Canon and Archive project will discuss their hypotheses and first results.
+        <p class='timestamp'>10:00-12:00, Literary Lab</p>
+        </div>
+      </div>
+        <div class='event postcard-left'>
+        <div class='event-date'>
+          <div class='event-month'>APR</div>
+          <div class='event-day'>16</div>
+          <div class='event-year'>2014</div>
+        </div>
+          <div class='event-text'>The members of the Lab's Suspense project will present a background of the project's aims along with some initial findings.
+          <p class='timestamp'>10:00-12:00, Literary Lab</p>
+          </div>
+        </div>
+    </div>
+</div>

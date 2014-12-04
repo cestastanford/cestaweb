@@ -1,0 +1,54 @@
+---
+layout: stanford-default
+title: People
+---
+
+<script type="text/javascript">
+  window.onload = function() { init() };
+
+  // Edit this for the correct sheet
+  var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?hl=en_US&hl=en_US&key=1oNzaEy4bktN5H4rLaQi1A9etwgCJ6EnOUJt6gvje8J8&output=html';
+
+  // Grab the data
+  // NB: Google simplifies the headers, so underscores are collapsed
+  // and words put together
+  function init() {
+    Tabletop.init( { key: public_spreadsheet_url,
+                     callback: showInfo,
+                     simpleSheet: true,
+                     orderby: 'lastname',            // order by
+                     reverse: false,                   // reverse sort
+                     debug: true } );                 // turn off for production
+  }
+
+  function showInfo(data, tabletop) {
+    // data comes through as a simple array since simpleSheet is turned on
+
+    // make sure the sheet is processed correctly
+    // alert("Successfully processed " + data.length + " rows!");
+
+    $.each( tabletop.sheets("staff").all(), function(i, people) {
+      var people_li = $('<li class="person span3">' + people.firstname + " " + people.lastname + '</li>')
+      people_li.append('<br>' + '<small>' + people.stanfordrole + '</small>');
+      people_li.appendTo(".cesta_people");
+    });
+
+    // test
+    // console.log(data);
+  }
+</script>
+
+<h1>{{ page.title }}</h1>
+
+<img src="/assets/images/lab2.png"/>
+
+<div class="staff-contact">
+<h3>Contact CESTA</h3>
+<p>Zephyr Frank or Matt Bryant</p>
+<p>Phone: (650) 721-1385 | Fax: (650) 725-5916 | <a href="https://www.facebook.com/cesta.stanford">Facebook</a> | <a href="http://cesta.stanford.edu">Web</a></p>
+</div>
+
+<div id="team-page">
+  <ul class="team row cesta_people">
+  </ul>
+</div>

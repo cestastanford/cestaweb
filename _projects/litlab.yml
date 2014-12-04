@@ -1,0 +1,14 @@
+description:
+  "Literary Lab."
+layout: project
+project_description: "Literary Lab."
+published: true
+short:
+  "Literary Lab."
+title:     Literary Lab
+website:   http://litlab.stanford.edu/
+category: lab
+members:
+  - Franco Moretti, Director
+  - Ryan Heuser, Associate Director
+  - Mark Algee-Hewitt, Associate Director

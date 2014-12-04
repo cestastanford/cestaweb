@@ -1,0 +1,28 @@
+---
+layout: stanford-default
+title: Labs &amp; Projects
+---
+<h1>{{ page.title }}</h1>
+
+<img src="{{ site.url }}/assets/images/lab.png"/>
+
+<p class="lead">The Center for Spatial and Textual Analysis comprises three labs and several affiliated projects</p>
+
+<div class="content-row">
+<h3>Labs</h3>
+
+{% for project in page.projects %}
+  <div class="col-md-4">
+    <h2><a href="{{ project[1].website }}">{{ project[1].title }}</a>
+    <ul class="team row">
+      {% for member in page.projects.members %}
+        <li>
+          {{ members.name }}
+        </li>
+      {% endfor %}
+      <center><a href="{{ project[1].website }}" class="btn btn-default btn-xs">Visit {{ project[1].title }}</a></center>
+    </ul>
+  </div>
+{% endfor %}
+
+</div>

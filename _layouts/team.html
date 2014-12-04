@@ -1,0 +1,42 @@
+---
+layout: stanford-default
+title: People
+---
+<h1>{{ page.title }}</h1>
+
+<img src="/assets/images/lab2.png"/>
+
+<div class="staff-contact">
+<h3>Contact CESTA</h3>
+<p>Zephyr Frank or Matt Bryant</p>
+<p>Phone: (650) 721-1385 | Fax: (650) 725-5916 | <a href="https://www.facebook.com/cesta.stanford">Facebook</a> | <a href="http://cesta.stanford.edu">Web</a></p>
+</div>
+
+<div id="team-page">
+  {% if page.team['staff'] %}
+
+    <ul class="team row">
+      {% for person in page.team['staff'] %}
+        <li class="person span3">
+          <a href="{{person[1].website}}">{{ person[1].name }}</a>
+          <br />
+          <small>{{ person[1].role }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if page.team['alumni'] %}
+    <h1>Alumni</h1>
+
+    <ul class="team row">
+      {% for person in page.team['alumni'] %}
+        <li class="person">
+          {{ person[1].name }}
+          <br />
+          <small>{{ person[1].role }}</small>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
