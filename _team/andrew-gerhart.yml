@@ -1,4 +1,4 @@
-active: false
+active: true
 bio:
 email:
 image:
@@ -10,5 +10,5 @@ name: Andrew Gerhart
 role: Researcher, Spatial History Project
 short:
 twitter:
-type: staff
+type: alumni
 website:
